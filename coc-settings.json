@@ -1,0 +1,66 @@
+{
+  "eslint.alwaysShowStatus": true,
+  "eslint.autoFixOnSave": true,
+  "typescript.updateImportsOnFileMove.enable": true,
+  "typescript.suggest.autoImports": true,
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "eslint.codeAction.disableRuleComment": {
+    "enable": true
+  },
+  "javascript.suggest.autoImports": true,
+  "java.format.enabled": true,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "dart",
+    "javascript",
+    "vue",
+    "scss",
+    "html",
+    "svg",
+    "java",
+    "css"
+  ],
+  "cssmodules.hintName": "cssmodules",
+  "flutter.provider.enableSnippet": true,
+  "tsserver.tsdk": "/usr/local/lib/node_modules/typescript/lib",
+  "flutter.lsp.initialization.closingLabels": false,
+  "diagnostic.errorSign": "✘",
+  "diagnostic.warningSign": "",
+  "diagnostic.infoSign": "",
+  "coc.preferences.colorSupport": true,
+  "suggest.noselect": false,
+  "suggest.floatEnable": false,
+  "prettier.eslintIntegration": false,
+  "prettier.printWidth": 100,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
+  "cSpell.userWords": [
+    "Signup",
+    "Subnav",
+    "Uninstallation",
+    "Upgrader",
+    "aizen",
+    "antd",
+    "appsflyer",
+    "clientid",
+    "clientsecret",
+    "ellipsize",
+    "insta",
+    "readdirp",
+    "reduxjs",
+    "resave"
+  ],
+  "cSpell.enabled": false,
+  "java.format.settings.url": "/Users/buddhistcoder/.config/coc/extensions/node_modules/redhat.java/eclipse-formatter.xml",
+  "java.jdt.ls.home": "/Users/buddhistcoder/eclipse.jdt.ls/org.eclipse.jdt.ls.product/target/repository",
+  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.showExpandedAbbreviation": "never",
+  "tsserver.log": "verbose",
+  "tsserver.trace.server": "verbose",
+  "codeLens.enable": false
+  /* "tsserver.watchOptions": { */
+  /*   "watchFile": "useFsEventsOnParentDirectory", */
+  /*   "watchDirectory": "useFsEvents", */
+  /*   "fallbackPolling": "fixedPollingInterval", */
+  /*   "synchronousWatchDirectory": false */
+  /* } */
+}
