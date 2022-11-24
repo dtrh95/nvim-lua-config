@@ -20,6 +20,7 @@ require "nv-treesitter"
 require "nv-indent-blankline"
 require "nv-session"
 require "nv-workspace"
+require "neo-test"
 
 -- require "nv-jdtls"
 require "nv-cmp"

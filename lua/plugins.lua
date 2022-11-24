@@ -74,6 +74,7 @@ return require("packer").startup(
     use "nvim-lua/plenary.nvim"
     use "jose-elias-alvarez/null-ls.nvim"
     use "jose-elias-alvarez/nvim-lsp-ts-utils"
+    use "jose-elias-alvarez/typescript.nvim"
     use "norcalli/nvim-colorizer.lua"
 
     use "airblade/vim-gitgutter"
@@ -126,5 +127,17 @@ return require("packer").startup(
       "iamcco/markdown-preview.nvim",
       run = function() vim.fn["mkdp#util#install"]() end,
     })
+
+    use {
+      "nvim-neotest/neotest",
+      requires = {
+        "nvim-lua/plenary.nvim",
+        "nvim-treesitter/nvim-treesitter",
+        "antoinemadec/FixCursorHold.nvim"
+      }
+    }
+
+    use "vim-test/vim-test"
+    use "nvim-neotest/neotest-vim-test"
   end
 )

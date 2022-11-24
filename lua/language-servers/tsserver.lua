@@ -5,7 +5,7 @@ local custom_attach = function(client, bufnr)
   -- print("'" .. client.name .. "' language server started" );
   client.resolved_capabilities.document_formatting = false
 
-  vim.cmd("command -buffer Formatting lua vim.lsp.buf.formatting()")
+  vim.cmd("command! -buffer Formatting lua vim.lsp.buf.formatting()")
 
   -- format on save
   -- vim.cmd("autocmd BufWritePost <buffer> lua vim.lsp.buf.formatting()")
@@ -98,6 +98,32 @@ lspconfig.tsserver.setup(
     -- settings = {documentFormatting = false},
   }
 )
+
+local cwd = vim.fn.getcwd()
+local project_library_path = cwd .. "/node_modules"
+
+local cmd = {
+    project_library_path .. "/@angular/language-server/bin/ngserver",
+    "--ngProbeLocations",
+    project_library_path,
+    "--tsProbeLocations",
+    project_library_path ,
+    "--stdio",
+}
+
+lspconfig.angularls.setup{
+  capabilities = capabilities,
+  init_options = require("nvim-lsp-ts-utils").init_options,
+  cmd = cmd,
+  filetypes = {
+    'html'
+  },
+  on_new_config = function(new_config, new_root_dir)
+      new_config.cmd = cmd
+  end,
+  on_attach = custom_attach,
+  handlers = handlers
+}
 
 vim.lsp.protocol.CompletionItemKind = {
   "   (Text) ",
